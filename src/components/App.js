@@ -1,6 +1,7 @@
 // js
 import React, { Component } from 'react';
 import Banner from './Banner';
+import Footer from './Footer';
 // css
 import '../styles/App.css';
 
@@ -17,6 +18,12 @@ const getStyles = () => {
   return resonStyles;
 };
 
+const getPStyles = () => {
+  return {
+    color : 'white',
+    paddingTop : '100px',
+  }
+}
 class App extends Component {
   render() {
     return (
@@ -24,6 +31,12 @@ class App extends Component {
         className="App"
         style={getStyles()}>
         <Banner />
+        <p style={getPStyles()}>
+
+          A musical life, coming soon ...
+
+        </p>
+        <Footer />
       </div>
     );
   }
