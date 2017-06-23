@@ -1,37 +1,30 @@
-// REACT
+// js
 import React, { Component } from 'react';
-// MATERIAL
-import AppBar from 'material-ui/AppBar';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// CUSTOM
-import Login from './Login';
+import Banner from './Banner';
+// css
 import '../styles/App.css';
 
-const resonanceStyles = {
-  bar : {
-    backgroundColor: 'rgb(0, 117, 255)',
-    color: 'white',
-    fontFamily: 'Comfortaa',
-    fontWeight: 300,
-    fontSize: 50
-  },
+const resonConfig = {
+  title : 'clix',
 };
 
-const resonanceConfig = {
-  title : 'clix',
+const resonStyles = {
+  fontFamily : 'Comfortaa',
+  fontWeight : 300,
+};
+
+const getStyles = () => {
+  return resonStyles;
 };
 
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <div className="App">
-          <AppBar
-            style={resonanceStyles.bar}
-            title={resonanceConfig.title}
-          />
-        </div>
-      </MuiThemeProvider>
+      <div
+        className="App"
+        style={getStyles()}>
+        <Banner />
+      </div>
     );
   }
 }
