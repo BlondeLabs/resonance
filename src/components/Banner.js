@@ -5,9 +5,7 @@ const bannerStyles = {
   backgroundColor: Colors.midnight.deep,
   color: Colors.midnight.shallow,
   height: '25vh',
-  padding: '25px',
-  paddingTop: '100px',
-  paddingBottom: '50px',
+  padding: '50px',
   fontSize: '8vmin',
   boxSizing: 'border-box',
 };
@@ -21,7 +19,7 @@ const Banner = () => {
     <div
       className="Banner"
       style={getStyles()}>
-      <div className="hvr-pulse">k o k o</div>
+      <div className="hvr-pulse title">k o k o</div>
     </div>
   );
 };

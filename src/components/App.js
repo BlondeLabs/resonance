@@ -23,7 +23,8 @@ const getPStyles = () => {
     color : 'white',
     paddingTop : '100px',
   }
-}
+};
+
 class App extends Component {
   render() {
     return (
@@ -33,7 +34,7 @@ class App extends Component {
         <Banner />
         <p style={getPStyles()}>
 
-          A musical life, coming soon ...
+          follow your sound...
 
         </p>
         <Footer />
