@@ -4,7 +4,7 @@ import gitlogo from '../media/GitHub-Mark-Light-32px.png'
 
 const footStyles = {
   position: 'fixed',
-  background: 'transparent',
+  background: 'rgb(11, 10, 51)',
   height: '24px',
   right: 0,
   bottom: 0,
@@ -23,12 +23,17 @@ class Footer extends Component {
   render() {
     return (
       <footer className="Foot" style={ getFootStyles() }>
-        <div className="Foot-logo">
-          <a className="hvr-pulse" href="https://github.com/Project-Clix">
-            <img src={gitlogo} alt={""}/>
-          </a>
-          <LoginButton className="hvr-pulse"/>
-        </div>
+
+          <div className="flex-item">
+            <a className="logo-pulse" href="https://github.com/Project-Clix">
+              <img src={gitlogo} alt={""}/>
+            </a>
+          </div>
+
+          <div className="flex-item">
+            <LoginButton className="logo-pulse"/>
+          </div>
+
       </footer>
     );
   }

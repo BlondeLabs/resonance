@@ -19,7 +19,7 @@ const Banner = () => {
     <div
       className="Banner"
       style={getStyles()}>
-      <div className="hvr-pulse title">k o k o</div>
+      <div className="hvr-pulse title">c l i x</div>
     </div>
   );
 };

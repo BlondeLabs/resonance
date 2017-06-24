@@ -6,15 +6,15 @@ const getStyles = () => {
     color: 'white',
     border: '0.5px solid white',
     borderRadius: '5px',
-    marginLeft: '50px',
     backgroundColor: 'transparent',
+    fontFamily: 'Comfortaa',
   }
 };
 
 const LoginButton = () => {
   return (
-    <button style={getStyles()}>
-      Alpha Login
+    <button className="logo-pulse" style={getStyles()}>
+      <span className="button-label"> Alpha Login </span>
     </button>
   )
 };

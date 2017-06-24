@@ -33,7 +33,7 @@ class App extends Component {
         style={getStyles()}>
         <Banner />
         <p style={getPStyles()}>
-
+          
           follow your sound...
 
         </p>
