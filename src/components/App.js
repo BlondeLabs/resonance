@@ -1,8 +1,9 @@
-// js
+// react
 import React, { Component } from 'react';
+// resonance
 import Banner from './Banner';
 import Footer from './Footer';
-// css
+import Constants from '../constants/Constants';
 import '../styles/App.css';
 
 const resonConfig = {
@@ -31,9 +32,9 @@ class App extends Component {
       <div
         className="App"
         style={getStyles()}>
-        <Banner />
+        <Banner title={Constants.title}/>
         <p style={getPStyles()}>
-          
+
           follow your sound...
 
         </p>

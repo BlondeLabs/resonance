@@ -14,12 +14,12 @@ const getStyles = () => {
   return bannerStyles;
 };
 
-const Banner = () => {
+const Banner = ({title}) => {
   return (
     <div
       className="Banner"
       style={getStyles()}>
-      <div className="hvr-pulse title">c l i x</div>
+      <div className="hvr-pulse title">{title}</div>
     </div>
   );
 };

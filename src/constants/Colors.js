@@ -6,7 +6,8 @@ const td = {
 const midnight = {
   deep : 'rgb(11, 10, 51)',
   shallow : 'rgb(13, 73, 255)',
-}
+};
+
 const Colors = {td, midnight};
 
 export default Colors;
