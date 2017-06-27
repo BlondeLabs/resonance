@@ -11,10 +11,15 @@ const getStyles = () => {
   }
 };
 
-const LoginButton = () => {
+const LoginButton = (props) => {
   return (
-    <button className="logo-pulse" style={getStyles()}>
+    <button
+      className="logo-pulse"
+      style={getStyles()}
+      onClick={props.onAuthRequest}>
+
       <span className="button-label"> Alpha Login </span>
+
     </button>
   )
 };

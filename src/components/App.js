@@ -1,44 +1,40 @@
 // react
 import React, { Component } from 'react';
+
 // resonance
 import Banner from './Banner';
 import Footer from './Footer';
-import Constants from '../constants/Constants';
+import Texts from '../constants/Texts';
 import '../styles/App.css';
 
-const resonConfig = {
-  title : 'clix',
-};
-
-const resonStyles = {
-  fontFamily : 'Comfortaa',
-  fontWeight : 300,
-};
-
-const getStyles = () => {
-  return resonStyles;
-};
-
-const getPStyles = () => {
-  return {
-    color : 'white',
-    paddingTop : '100px',
-  }
-};
-
 class App extends Component {
+  state = {
+    authenticated: false,
+  }
+
+  handleAuth = (e) => {
+    this.setState({
+      authenticated: !this.state.authenticated,
+    });
+  }
+
   render() {
+    const isAuthenticated = this.state.authenticated;
+
     return (
-      <div
-        className="App"
-        style={getStyles()}>
-        <Banner title={Constants.title}/>
-        <p style={getPStyles()}>
 
-          follow your sound...
+      <div className="App">
 
-        </p>
-        <Footer />
+        <Banner title={Texts.title}/>
+
+        {isAuthenticated ? (
+          <p>welcome</p>
+        ) : (
+          <p>follow your sound. coming soon.</p>
+        )}
+
+        <Footer onAuthRequest={this.handleAuth}/>
+
       </div>
     );
   }

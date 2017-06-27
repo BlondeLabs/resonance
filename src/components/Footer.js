@@ -31,7 +31,10 @@ class Footer extends Component {
           </div>
 
           <div className="flex-item">
-            <LoginButton className="logo-pulse"/>
+            <LoginButton
+              className="logo-pulse"
+              onAuthRequest={this.props.onAuthRequest}
+            />
           </div>
 
       </footer>
