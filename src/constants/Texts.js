@@ -1,5 +1,6 @@
 const Text = {
-  title : "c a l y p s o"
+  title : 'r v r b',
+  titleButtonLabel : 'try alpha',
 };
 
 export default Text;

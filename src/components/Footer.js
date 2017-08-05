@@ -1,44 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import LoginButton from './LoginButton';
+import LoginForm from './LoginForm';
 import gitlogo from '../media/GitHub-Mark-Light-32px.png'
 
-const footStyles = {
-  position: 'fixed',
-  background: 'rgb(11, 10, 51)',
-  height: '24px',
-  right: 0,
-  bottom: 0,
-  left: 0,
-  padding: '1rem',
-};
+/* >>- Footer ->
+This component contains elements in a section fixed to the bottom of the screen.
+*/
+const Footer = ({isAuthenticating, isAuthenticated, onAuthSubmit, onAuthStart}) => {
 
-const getFootStyles = () => {
-  return footStyles;
-};
+  return (
+    <footer className="Foot">
 
-const getLogoStyles = () => {
-};
+        <div className="flex-item">
+          <a className="logo-pulse" href="https://github.com/Project-Clix">
+            <img src={gitlogo} alt={""}/>
+          </a>
+        </div>
 
-class Footer extends Component {
-  render() {
-    return (
-      <footer className="Foot" style={ getFootStyles() }>
-
-          <div className="flex-item">
-            <a className="logo-pulse" href="https://github.com/Project-Clix">
-              <img src={gitlogo} alt={""}/>
-            </a>
-          </div>
-
-          <div className="flex-item">
-            <LoginButton
-              className="logo-pulse"
-              onAuthRequest={this.props.onAuthRequest}
-            />
-          </div>
-
-      </footer>
-    );
-  }
+    </footer>
+  );
 }
 export default Footer;

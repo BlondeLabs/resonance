@@ -2,7 +2,7 @@ import React from 'react';
 
 const getStyles = () => {
   return {
-    padding: '5px',
+    padding: '15px',
     color: 'white',
     border: '0.5px solid white',
     borderRadius: '5px',
@@ -11,12 +11,12 @@ const getStyles = () => {
   }
 };
 
-const LoginButton = (props) => {
+const LoginButton = ({onLoginButtonClick}) => {
   return (
     <button
       className="logo-pulse"
       style={getStyles()}
-      onClick={props.onAuthRequest}>
+      onClick={onLoginButtonClick}>
 
       <span className="button-label"> Alpha Login </span>
 

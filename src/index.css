@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+
+[data-reactroot] {
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
 }
+
 button:focus {
   outline:0;
 }

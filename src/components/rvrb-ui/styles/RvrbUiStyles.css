@@ -1,0 +1,19 @@
+/**
+ * CSS common applying to rvrb-ui elements.
+ *
+ */
+
+.rvrb-button {
+  color: white;
+  background: transparent;
+  border: solid 1px white;
+
+  font-family: 'Comfortaa';
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.rvrb-button-label {
+  font-size: 2em;
+}

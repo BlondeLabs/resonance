@@ -8,6 +8,11 @@ const midnight = {
   shallow : 'rgb(13, 73, 255)',
 };
 
-const Colors = {td, midnight};
+const braun = {
+  deep : 'black',
+  shallow : 'white',
+}
+
+const Colors = {braun, td, midnight};
 
 export default Colors;

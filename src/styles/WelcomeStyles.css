@@ -1,0 +1,27 @@
+.welcome-container {
+  background: linear-gradient(to bottom right, #6770da, #9ccfe6);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25%;
+
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.welcome-title {
+  color: white;
+
+  font-family: 'Comfortaa';
+  font-size: 10vmin;
+
+  text-align: center;
+  vertical-align: middle;
+  flex: auto;
+}
+
+.welcome-button {
+  flex: auto;
+}
