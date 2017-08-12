@@ -92,10 +92,13 @@ class App extends Component {
    * @param {Object} position : position data
    */
   handlePosSuccess(position) {
-    console.log('res // setting location to: ' + position.coords.lat + ', ' + position.coords.lon);
+    const userPosition = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    };
 
     this.setState({
-      coords: position.coords,
+      position: userPosition,
     });
 
   }
@@ -105,7 +108,7 @@ class App extends Component {
    * @param {Object} err : error data
    */
   handleError(err){
-    console.warn('res // ERROR : ' + err.code);
+    console.warn('res // ERROR : ' + err.msg);
   }
 
   /**
@@ -132,7 +135,7 @@ class App extends Component {
       case 'EXPLORER':
         return (
           <Explorer
-            coords={this.state.coords}
+            position={this.state.position}
             getPosition={this.getPosition}
           />
         );
@@ -152,11 +155,7 @@ class App extends Component {
    * Get the application footer content.
    */
   genFooterContent() {
-    return (
-
-      <Footer />
-
-    );
+    return <Footer />;
   }
 
   /**

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import '../styles/ExplorerStyles.css'
+import SoundMap from './SoundMap';
+import '../styles/ExplorerStyles.css';
 
 /*
   >>- Explorer ->
@@ -8,22 +9,37 @@ import '../styles/ExplorerStyles.css'
   This component contains a map and search bar, and maintains state thereof.
 */
 class Explorer extends Component {
+  state = {
+    value: ''
+  }
+
   constructor(props) {
     super(props);
 
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      value: event.target.value
+    });
   }
 
   render() {
-
-    const { coords, customStyles } = this.props;
-
-    const lat = coords && coords.latitude;
-    const lon = coords && coords.longitude;
-
+    const { position } = this.props;
+    
     return(
-      <div className='Explorer' style={customStyles}>
-        <p> Latitude: { lat } </p>
-        <p> Longitude: { lon } </p>
+      <div className='Explorer'>
+        <div className='Explorer-search-bar'>
+          <input
+            type='text'
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className='Explorer-map'>
+          <SoundMap position={position}/>
+        </div>
       </div>
     );
   }

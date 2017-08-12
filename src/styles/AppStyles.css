@@ -6,7 +6,6 @@ p {
 .App {
   font-family: 'Comfortaa', sans-serif;
   font-weight: 300;
-  text-align: center;
 
   height: 100%;
 }
@@ -22,11 +21,8 @@ p {
   font-size: large;
 }
 
-
 .title {
   padding: 10px;
-  border: 0px solid transparent;
-  border-radius: 15px;
 }
 
 .button-label {
@@ -36,10 +32,12 @@ p {
 .Banner {
   background-color: white;
   color: black;
-  height: 25vh;
+  height: 6vh;
   padding: 50px;
-  font-size: 8vmin;
+  font-size: 4vmin;
   box-sizing: border-box;
+  border-bottom: 1px solid black;
+  vertical-align: middle;
 }
 
 .Foot {

@@ -3,6 +3,10 @@ import React from 'react';
 import RvrbButton from './rvrb-ui/components/RvrbButton';
 import '../styles/WelcomeStyles.css';
 
+const customButtonStyles = {
+  fontSize : '2vmin',
+};
+
 const Welcome = ({title, label, onClick}) => {
   return (
     <div className='welcome-container'>
@@ -13,6 +17,7 @@ const Welcome = ({title, label, onClick}) => {
         <RvrbButton
           label={label}
           onClick={onClick}
+          customStyles={customButtonStyles}
         />
       </div>
     </div>
