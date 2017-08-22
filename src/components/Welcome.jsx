@@ -1,25 +1,23 @@
+// >>= React =>
 import React from 'react';
 
+// >>= Resonance =>
 import RvrbButton from './rvrb-ui/components/RvrbButton';
-import '../styles/WelcomeStyles.css';
+import arrow from '../media/arrow.svg';
+import AppStyles from '../styles/AppStyles';
 
 const customButtonStyles = {
   fontSize : '2vmin',
 };
 
+const { WelcomeContainerStyles, WelcomeTitleStyles, WelcomeButtonStyles } = AppStyles;
+
 const Welcome = ({title, label, onClick}) => {
   return (
-    <div className='welcome-container'>
-      <div className='welcome-title'>
-        {title}
-      </div>
-      <div className='welcome-button'>
-        <RvrbButton
-          label={label}
-          onClick={onClick}
-          customStyles={customButtonStyles}
-        />
-      </div>
+    <div style={WelcomeContainerStyles}>
+      <div
+        onClick={onClick}
+        style={WelcomeTitleStyles}>{title}</div>
     </div>
   );
 };

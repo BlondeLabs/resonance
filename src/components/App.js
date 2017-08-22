@@ -1,5 +1,6 @@
 // >>= React =>
 import React, { Component } from 'react';
+import Typekit from 'react-typekit';
 
 // >>= Resonance =>
 import Banner from './Banner';
@@ -7,6 +8,7 @@ import Footer from './Footer';
 import Explorer from './Explorer';
 import Welcome from './Welcome';
 
+import Config from '../constants/Config';
 import Texts from '../constants/Texts';
 import Users from '../constants/Users';
 
@@ -121,15 +123,18 @@ class App extends Component {
    * Get the application banner content.
    */
   genBannerContent() {
+    const { bannerConfig } = Config;
 
-    return <Banner title={Texts.title} />;
+    return(
+      <Banner config={bannerConfig} />
+    );
 
   }
 
   /**
    * Get the application primary content.
    */
-  genMainContent(page) {
+  genPrimaryContent(page) {
     switch (page) {
 
       case 'EXPLORER':
@@ -165,18 +170,17 @@ class App extends Component {
   render() {
 
     // params
-    const {authenticated, page} = this.state;
+    const { authenticated, page } = this.state;
 
     // html
     const banner = authenticated && this.genBannerContent();
-    const footer = authenticated && this.genFooterContent();
-    const primary = this.genMainContent(page);
+    const primary = this.genPrimaryContent(page);
 
     return (
       <div className="App">
         {banner}
         {primary}
-        {footer}
+        <Typekit kitId="ror1hyt" />
       </div>
     );
   }

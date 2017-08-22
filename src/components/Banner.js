@@ -1,10 +1,24 @@
 import React from 'react';
-import Colors from '../constants/Colors';
 
-const Banner = ({title}) => {
+import AppStyles from '../styles/AppStyles';
+
+const Banner = ({ config }) => {
+  // styles
+  const { BannerItemStyles, BannerContainerStyles } = AppStyles;
+
+  // items
+  const items = config.map(function(child){
+    return (
+      <div style={BannerItemStyles}>
+        {child.label}
+      </div>
+    );
+  });
+
+  // composition
   return (
-    <div className="Banner">
-      <div className="title">{title}</div>
+    <div style={BannerContainerStyles}>
+      {items}
     </div>
   );
 };
